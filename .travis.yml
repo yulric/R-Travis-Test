@@ -5,7 +5,22 @@ cache: packages
 r:
   - release
 
+before_script:
+  - R -e "install.packages('devtools')"
+  
 script:
   - R -e 'devtools::document()'
   - R CMD build .
   - R CMD check *tar.gz
+  
+after_success:
+  - Rscript -e 'pkgdown::build_site()'
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_PAT
+  keep-history: true
+  local-dir: docs
+  on:
+    branch: master
