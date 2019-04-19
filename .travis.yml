@@ -4,3 +4,8 @@ cache: packages
 
 r:
   - release
+
+script:
+  - R -e 'devtools::document()'
+  - R CMD build .
+  - R CMD check *tar.gz
