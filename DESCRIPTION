@@ -20,7 +20,8 @@ Depends:
   R (>= 3.2)
 Imports:
   pkgdown,
-  roxygen2
+  roxygen2,
+  knitr
 Suggests:
 URL: https://github.com/Big-Life-Lab/bllFlow
 BugReports: https://github.com/Big-Life-Lab/bllFlow/issues
