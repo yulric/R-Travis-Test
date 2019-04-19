@@ -3,10 +3,10 @@
 #' @param a test
 #' @param b test
 #'
-#' @return
+#' @return number
 #' @export
 #'
-#' @examples
+#' @examples add(1, 2)
 add <- function(a, b) {
   return(a+b)
 }
