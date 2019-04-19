@@ -6,7 +6,7 @@
 #' @return number
 #' @export
 #'
-#' @examples add(1, 2)
+#' @examples add(2, 3)
 add <- function(a, b) {
   return(a+b)
 }
